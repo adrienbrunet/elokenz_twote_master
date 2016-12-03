@@ -1,0 +1,6 @@
+[flake8]
+exclude = */docs/*, */.tox/*, */.venv/*, */migrations/*, */settings.py, manage.py
+max-line-length = 80
+
+# E12x continuation line indentation
+ignore = E12

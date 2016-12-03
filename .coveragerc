@@ -1,0 +1,11 @@
+[run]
+omit =
+	*/tests/*
+	*/migrations/*
+	*/locale/*
+
+[report]
+omit =
+	*/tests/*
+	*/migrations/*
+	*/locale/*
