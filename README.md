@@ -24,8 +24,6 @@ Download NLP related corpora:
 `curl https://raw.githubusercontent.com/codelucas/newspaper/master/download_corpora.py | python3`
 
 
-
-
 - for nltk libraries:
 ```
 sudo python -m nltk.downloader -d /usr/local/share/nltk_data all.
@@ -34,17 +32,22 @@ sudo python -m nltk.downloader -d /usr/local/share/nltk_data all.
 - In your `INSTALLED_APPS`, add:
 
 ```python
-    'modeltranslation',  # translation within models
     ...
+    'rest_framework',
+    'corsheaders',
     'elokenz_twote',
 ```
 
-`modeltranslation` should be placed on top of the installed apps.
-
 There is an automatic check which makes sure all of these apps are in INSTALLED_APPS.
 
-- Add url(r'^', include('elokenz_twote.urls')) in your urls.py
+You need to configure
+CORS_ORIGIN_WHITELIST = (
+    '127.0.0.1:8080'
+)
+CORS_URLS_REGEX = r'^/api/.*$' matching the base index of your api (see next step)
 
+- Add url(r'^', include('elokenz_twote.urls')) in your urls.py
+You can add here the prefix you want for these api calls
 
 TEST
 ----

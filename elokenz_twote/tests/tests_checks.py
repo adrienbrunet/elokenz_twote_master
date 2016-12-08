@@ -30,7 +30,7 @@ class TestCheck(SimpleTestCase):
             assert len(
                 check_mandatory_apps_are_in_installed_apps(
                     app_configs=self.apps.get_app_configs())
-            ) == 2
+            ) == 3
 
         assert len(
             check_mandatory_apps_are_in_installed_apps(

@@ -1,8 +1,9 @@
 django>=1.8,<1.11
 psycopg2
-django-modeltranslation
 newspaper3k
+django-cors-headers
 tox
+rest_framework
 
 # TESTING
 factory_boy
@@ -12,7 +13,6 @@ pytest-cov
 pytest-flake8
 pytest-mock
 coverage
-tox
 flake8
 
 # debug toolbar

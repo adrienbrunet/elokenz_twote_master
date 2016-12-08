@@ -9,8 +9,9 @@ def check_mandatory_apps_are_in_installed_apps(app_configs, **kwargs):
 
     errors = []
     needed_modules = [
-        'modeltranslation',
+        'corsheaders',
         'elokenz_twote',
+        'rest_framework',
     ]
 
     for module in needed_modules:
